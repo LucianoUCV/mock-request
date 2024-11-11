@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mock Request</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="conti1.png">
+</head>
+<body>
+    <div class="div-1">
+        <form id="getForm" class="form-container">
+            <h2>GET Request</h2>
+            <label for="getRequest">Enter GET request URL:</label>
+            <input type="text" value="http://localhost:3001/" id="getRequest" name="url" placeholder="Example: http://localhost:3001/equipments/:stationId/units/:unitId" size="40" required>
+            <button type="submit" id="getButton">Submit GET</button>
+        </form>
+        
+        <form id="postPutForm" class="form-container">
+            <h2>POST/PUT Request</h2>
+            <label for="postPutRequest">Enter POST/PUT request URL:</label>
+            <input type="text" value="http://localhost:3001/" id="postPutrequest" name="url" placeholder="Example: http://localhost:3001/equipments/:stationId/units/:unitId" size="40" required>
+            
+            <label for="method">Request Method:</label>
+            <div class="custom-dropdown">
+                <div class="custom-dropdown-trigger">Select method</div>
+                <div class="custom-dropdown-content" id="method">
+                    <div class="custom-dropdown-item" data-value="POST">POST</div>
+                    <div class="custom-dropdown-item" data-value="PUT">PUT</div>
+                </div>
+            </div>
+            
+            <label for="payload">Payload (for POST/PUT):</label>
+            <textarea id="payload" name="payload" rows="4" cols="50" placeholder="Enter JSON data here"></textarea>
+            
+            <button type="submit" id="postPutButton">Submit POST/PUT</button>
+        </form>
+        
+        <div id="responseContainer">
+            <pre id="responseData"></pre>
+        </div>
+    </div>
+    <img src="conti2.png" id="logo" alt="Logo" onclick="openPage()" >
+    <script src="app.js"></script>
+</body>
+</html>
